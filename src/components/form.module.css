@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 30px 0;
+}
+
+.frame {
+    max-width: 430px;
+    background: #F9F9FE;
+    border-radius: 8px;
+    padding: 25px 33px;
+    width: 96%;
+}
+
+
+.wrapperChat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 30px 0;
+}
