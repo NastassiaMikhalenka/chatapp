@@ -23,7 +23,7 @@ export const Form = () => {
     }
 
     const connect = () => {
-        socket.current = new WebSocket('ws://young-headland-51523.herokuapp.com/')
+        socket.current = new WebSocket('wss://young-headland-51523.herokuapp.com/')
         socket.current.onopen = () => {
             setConnected(true)
             const message = {
