@@ -1,6 +1,7 @@
 import React, {useRef, useState} from "react";
 import styles from './form.module.css';
 import {Login} from "./login/login";
+import {Chat} from "./chat/chat";
 
 
 export const Form = () => {
@@ -61,23 +62,10 @@ export const Form = () => {
     }
 
     return (
-        <div className={styles.wrapperChat}>
-            <div className={styles.frame}>
-                <div>
-                    {messages.map(mess =>
-                        <div key={mess.id}>
-                            {mess.event === 'connection'
-                                ? <div>Пользователь {mess.userName} подключился</div>
-                                : <div className={mess.id}>{mess.userName}: {mess.message}</div>
-                            }
-                        </div>
-                    )}
-                </div>
-                <div>
-                    <input type={'text'} value={value} onChange={e => setValue(e.target.value)}/>
-                    <button onClick={sendMessage}>Add</button>
-                </div>
-            </div>
-        </div>
+        <Chat setValue={setValue}
+              value={value}
+              messages={messages}
+              sendMessage={sendMessage}
+        />
     )
 }

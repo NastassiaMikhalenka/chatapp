@@ -1,0 +1,118 @@
+.frame {
+    max-width: 430px;
+    background: #F9F9FE;
+    border-radius: 8px;
+    padding: 25px 33px;
+
+}
+
+
+.wrapperChat {
+    width: 60vw;
+    background: #0C2233;
+    border-radius: 8px;
+    height: 90vh;
+    margin: auto;
+    font-family: 'Hind Siliguri', sans-serif;
+    -webkit-box-shadow: 0px 0px 49px -3px rgba(74, 82, 255, 1);
+    -moz-box-shadow: 0px 0px 49px -3px rgba(74, 82, 255, 1);
+    box-shadow: 0px 0px 49px -3px rgba(74, 82, 255, 1);
+}
+
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    height: 73vh;
+    overflow: scroll;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.messagesContainer::-webkit-scrollbar {
+    width: 0;
+}
+
+.chatBoxContainer {
+    padding: 10px 0;
+}
+
+.userConnected {
+    color: #4A52FF;
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.messContainer {
+    background: #1C2A37;
+    border-radius: 12px;
+    width: 50%;
+    padding: 5px 10px;
+    margin: 10px 10px;
+}
+
+.username {
+    color: #4A52FF;
+    text-transform: uppercase;
+}
+
+.message {
+    color: #ffffff;
+    margin-top: -20px;
+}
+
+
+.wrap {
+    border-top: 2px solid #1C2A37;
+    width: 100%;
+    display: block;
+}
+
+
+.wrap textarea {
+    background: #0C2233;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: calc(100vh - 87vh);
+    width: calc(100% - 70px);
+    resize: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Hind Siliguri', sans-serif;
+    padding: 10px 20px;
+}
+
+.wrap textarea:focus {
+    outline: none;
+}
+
+.wrap textarea::-webkit-scrollbar {
+    width: 1px;
+}
+
+
+.btnSend {
+    background: #0C2233 url(/src/assets/img/mailblue.svg) no-repeat center/auto 57%;
+    width: 70px;
+    height: calc(80vh - 73vh);
+    border: none;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+
+@media (max-width: 600px) {
+    .wrapperChat {
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .messContainer {
+        width: 70%;
+    }
+    .wrap textarea {
+        height: calc(100vh - 82vh);
+    }
+}
