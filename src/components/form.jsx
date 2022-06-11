@@ -1,9 +1,11 @@
 import React, {useRef, useState} from "react";
 import styles from './form.module.css';
+import {Login} from "./login/login";
 
 
 export const Form = () => {
     const [messages, setMessages] = useState([]);
+    // const [users, setUsers] = useState([]);
     const [value, setValue] = useState('');
     const socket = useRef();
     const [connected, setConnected] = useState(false);
@@ -26,17 +28,19 @@ export const Form = () => {
         socket.current = new WebSocket('wss://young-headland-51523.herokuapp.com/')
         socket.current.onopen = () => {
             setConnected(true)
-            const message = {
-                event: 'connection',
-                userName,
-                id: Date.now()
-            }
-            socket.current.send(JSON.stringify(message));
-            console.log('socket.current.onOpen')
+                const message = {
+                    event: 'connection',
+                    userName,
+                    id: Date.now()
+                }
+                socket.current.send(JSON.stringify(message));
+                console.log('socket.current.onOpen')
         }
         socket.current.onmessage = (e) => {
             const message = JSON.parse(e.data)
+            // const user = JSON.parse(e.data)
             setMessages(prev => [...prev, message])
+            // setUsers(prev => [...prev, user])
             console.log('socket.current.onMessage')
         }
         socket.current.onclose = () => {
@@ -49,15 +53,10 @@ export const Form = () => {
 
     if (!connected) {
         return (
-            <div className={styles.wrapper}>
-                <div className={styles.frame}>
-                    <input type={'text'}
-                           placeholder={'Your name'}
-                           value={userName} onChange={e =>
-                        setUserName(e.target.value)}/>
-                    <button onClick={connect}>Connect</button>
-                </div>
-            </div>
+            <Login connect={connect}
+                   userName={userName} setUserName={setUserName}
+                   connected={connected} setConnected={setConnected}
+                   setMessages={setMessages}/>
         )
     }
 

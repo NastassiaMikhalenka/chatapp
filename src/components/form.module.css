@@ -1,10 +1,10 @@
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-    padding: 30px 0;
-}
+/*.wrapper {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    min-height: 90vh;*/
+/*    padding: 30px 0;*/
+/*}*/
 
 .frame {
     max-width: 430px;
@@ -19,6 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    /*height: 90vh;*/
     padding: 30px 0;
 }
