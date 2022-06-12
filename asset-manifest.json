@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/chatapp/static/css/main.86ac70d7.css",
-    "main.js": "/chatapp/static/js/main.d71226ca.js",
+    "main.js": "/chatapp/static/js/main.142855f6.js",
     "static/js/787.35cea4b2.chunk.js": "/chatapp/static/js/787.35cea4b2.chunk.js",
     "index.html": "/chatapp/index.html",
     "static/media/mailblue.svg": "/chatapp/static/media/mailblue.a0ed63537b656af7af65.svg",
     "main.86ac70d7.css.map": "/chatapp/static/css/main.86ac70d7.css.map",
-    "main.d71226ca.js.map": "/chatapp/static/js/main.d71226ca.js.map",
+    "main.142855f6.js.map": "/chatapp/static/js/main.142855f6.js.map",
     "787.35cea4b2.chunk.js.map": "/chatapp/static/js/787.35cea4b2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.86ac70d7.css",
-    "static/js/main.d71226ca.js"
+    "static/js/main.142855f6.js"
   ]
 }
