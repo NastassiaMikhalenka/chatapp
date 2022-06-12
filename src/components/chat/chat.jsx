@@ -9,10 +9,6 @@ export const Chat = ({setValue, value, messages, sendMessage}) => {
     useEffect(() => {
         bottomDiv.current?.scrollIntoView();
     })
-    // const keySend = (e) => {
-    //     if (e.key === 'Enter') {
-    //         sendMessage();
-    //     }}
 
     return (
         <div className={styles.wrapperChat}>
@@ -34,16 +30,18 @@ export const Chat = ({setValue, value, messages, sendMessage}) => {
                 )}
             </div>
             <form className={styles.wrap} onKeyDown={(e) => {
-                if (e.key === 'Enter') {
+                if (e.shiftKey && (e.keyCode === 13)) {
+                    value += '\r\n';
+                } else if (e.keyCode === 13 && value.trim() !== '') {
                     sendMessage();
-                }}
-            } >
+                }
+            }}>
                 <textarea value={value}
                           onChange={e => setValue(e.target.value)}
-                          required
+
                 />
                 <button onClick={sendMessage}
-                        className={styles.btnSend}></button>
+                        className={styles.btnSend} disabled={!value}></button>
             </form>
         </div>
     )

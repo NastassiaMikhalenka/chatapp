@@ -35,20 +35,20 @@ export const Form = () => {
                     id: Date.now()
                 }
                 socket.current.send(JSON.stringify(message));
-                console.log('socket.current.onOpen')
+                // console.log('socket.current.onOpen')
         }
         socket.current.onmessage = (e) => {
             const message = JSON.parse(e.data)
             // const user = JSON.parse(e.data)
             setMessages(prev => [...prev, message])
             // setUsers(prev => [...prev, user])
-            console.log('socket.current.onMessage')
+            // console.log('socket.current.onMessage')
         }
         socket.current.onclose = () => {
-            console.log('socket.current.onClose')
+            // console.log('socket.current.onClose')
         }
         socket.current.onerror = () => {
-            console.log('socket.current.onError')
+            // console.log('socket.current.onError')
         }
     }
 
