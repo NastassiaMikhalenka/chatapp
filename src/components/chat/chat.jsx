@@ -41,7 +41,7 @@ export const Chat = ({setValue, value, messages, sendMessage}) => {
 
                 />
                 <button onClick={sendMessage}
-                        className={styles.btnSend} disabled={!value}></button>
+                        className={styles.btnSend} disabled={!value.trim()}></button>
             </form>
         </div>
     )
