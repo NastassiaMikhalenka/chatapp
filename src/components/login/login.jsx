@@ -9,7 +9,7 @@ export const Login = ({userName, setUserName, connect, setConnected, setMessages
     const connectBtn = () => {
         if (userName) {
             connect()
-            setUserName('')
+            // setUserName('')
         }
     }
 
